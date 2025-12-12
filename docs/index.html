@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Spotify</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FORMULARIO PARA SUBIR CANCIONES -->
+  <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+    <input type="text" name="title" placeholder="Título de la canción" required>
+    <input type="file" name="audio" accept="audio/*" required>
+    <input type="file" name="cover" accept="image/*">
+    <button type="submit">Subir canción</button>
+  </form>
+
+  <!-- REPRODUCTOR -->
+  <header id="player">
+    <img id="cover" src="" alt="Carátula">
+      <h3 id="song-title">Selecciona una canción</h3>
+      <div id="controls">
+        <button id="prev">⏮</button>
+        <button id="togglePlay">▶️</button>
+        <button id="next">⏭</button>
+        <button id="mute">🔊</button>
+      </div>
+      <div id="progress-container">
+        <span id="current-time">0:00</span>
+        <input type="range" id="progress" min="0" max="100" value="0">
+        <span id="remaining-time">-0:00</span>
+      </div>
+  </header>
+
+  <!-- PLAYLIST -->
+   <div id="songList"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
