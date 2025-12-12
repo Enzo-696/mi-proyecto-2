@@ -2,18 +2,20 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mini Spotify</title>
+  <title>Sonel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- FORMULARIO PARA SUBIR CANCIONES -->
-  <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
+  <div class="form">
+    <form id="uploadForm" enctype="multipart/form-data" method="POST" action="/upload">
     <input type="text" name="title" placeholder="Título de la canción" required>
     <input type="file" name="audio" accept="audio/*" required>
     <input type="file" name="cover" accept="image/*">
     <button type="submit">Subir canción</button>
   </form>
+  </div>
 
   <!-- REPRODUCTOR -->
   <header id="player">
@@ -21,7 +23,7 @@
       <h3 id="song-title">Selecciona una canción</h3>
       <div id="controls">
         <button id="prev">⏮</button>
-        <button id="togglePlay">▶️</button>
+        <button id="togglePlay">▶</button>
         <button id="next">⏭</button>
         <button id="mute">🔊</button>
       </div>
