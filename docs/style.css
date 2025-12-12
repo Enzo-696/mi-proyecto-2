@@ -50,7 +50,6 @@ body{
     gap: 20px;
     position: fixed;
     right: 0;
-    background: #fff ;
 }
 #song-title{
     color: var(--co-3);
@@ -122,3 +121,4 @@ body{
     border: 1px solid var(--co-2);
     color: var(--co-3);
 }
+
